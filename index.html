@@ -32,13 +32,13 @@
             </div>
             <!-- <h4 v-if="tasks.length == 0">Тут пусто, а это значит, что у тебя нет дел и ты можешь {{ messages[Math.floor(Math.random() * messages.length)] }}</h4> -->
             <div class="row pt-4">
-                <div v-for="(board, boardIndex) in boards" :key="boardIndex" class="col-4">
+                <div v-for="(board, boardIndex) in boards" :key="boardIndex" class="col-lg-4 col-md-6">
                     <div class="container py-4">
 
                         <div class="border shadow-sm p-3 mb-3 bg-white">
                             <input type="text" v-model="board.title" class="form-control border-0 border-bottom"
                                 placeholder="Введите название списка">
-                                <div style="margin-top: 12px"></div>
+                            <div style="margin-top: 12px"></div>
                             <div v-for="(task, index) in board.tasks" :key="index">
                                 <div class="border shadow-sm p-3 mb-3 bg-white"
                                     :style="`background: ${task.color} !important`">
